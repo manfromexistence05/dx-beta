@@ -21,7 +21,6 @@
  Developing experience or delightfull expreince.
 
 ## Documentation
-
 For details on how to use Dx, check out our [documentation](https://dx.vercel.app/docs).
 
 ## Microservices new final folders list:
@@ -58,8 +57,6 @@ For details on how to use Dx, check out our [documentation](https://dx.vercel.ap
   | 29  | workspace |
   | 30  | cybersecurity |
 
-
-
 # Motivation
 Dx has used many other opensource github repoes in it.This is not waste of time cause that repoes are fetced automaticlly by Terminalflow and this repoes is used probably in the best way possible by maintaing their copyrights after their repective owners.I used other repoes cause Dx aims to do a lot of things besides + up + down and every way around WWW INTERNET stuffts(not native cause that problem has its own solution guess the unique name would be,,,okay okay.. donot bottheer -> DX Native -I know such a uniqe name "I know I am best at naming stuffs" [And I am too lazy so donot expect me to put logo or link to that website here do it by yourself(Ninja Tecnic For Rankning Searh In Google Search --- and I beg you please go to Dx Native ignoring my bad joke)]).
 And many things are already maded by cool programmers.I can make it but it will littery take me months doing so.Most imporatant thing is that I donot like to build the wheel again and again in this way nothing is going to be better cause we donot live
@@ -68,14 +65,11 @@ inspirations
 folder and delete your respective reposetry to gain access to your own products!!!
 So, moral of this story no.. of this descritption.. I mean Novel stated above is --- OpenSource conrtibution is good for your health(Donot ask me how??)
 and Dx is one of the most precious one amoung them!!!(LOL)
-
 How to Steall || LOL Just kidding!!! || Anything made by me in exitence plus (any+every)thing in not exitstencev like doesnot exits like now But will exit... Later!!! like me yeah... yeah yeeah me BeingOfExistence is public and free to use anywhere!!! || Just put (BeingOfExistence => Pleaaases pretty pleasaase!!!) logo in that software or anddd...  in exitence plus (any+every)thing in not exitstencev like doesnot exits like now But will exit... Later!!!!!
 
 ## `manfromexistence/dx -> Getting Started`
-
 <details>
 <summary>So, dx by default uses new blazing fast bun runtime but you can also use npm,yarn and pnpm if you want plus some important github repos that you really want to chech yourself!</summary>
-
 material-color-utilities 
 ```
 git clone https://github.com/material-foundation/material-color-utilities.git colors && cd colors && rm -rf .git && cd ..
@@ -297,14 +291,6 @@ bun start
 
 I hope these brought a smile to your face! 😊
 
-<!--
-<div align="center">
-    <a href="https://dx-emon-beingofexistence-shohan.vercel.app/">
-        <img src="https://github.com/beingofexistence/dx/assets/103621682/0228bb42-3520-4bb9-9eb1-67704866dfa3" width="300"/>
-    </a>
-</div>
--->
-
 ## License
 Licensed under the [MIT license](https://github.com/beingofexistence/dx/blob/main/LICENSE.md).
 This project contains the main features of the dx application.
@@ -320,7 +306,7 @@ Keep watching cat videos + Saturo Gojo will definitely return after 236 chapter 
 1. pipdream
 2. ...
 
-## 22/04/2024(Friday)
+## 22/04/2024(Monday)
 somethimes everything sucks. But that time never comes cause every moment is
 already good,We just need to have a vision to see through it.
 
