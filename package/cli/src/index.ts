@@ -24,12 +24,12 @@ import {compareVersions, getComponents} from './scripts/helpers';
 
 const commandList: CommandName[] = ['add', 'env', 'init', 'list', 'upgrade', 'doctor', 'remove'];
 
-const nextui = new Command();
+const ui = new Command();
 
-nextui
-  .name('nextui')
+ui
+  .name('ui')
   .usage('[command]')
-  .description(`${chalk.blue(getCommandDescAndLog(`\nNextUI CLI v${pkg.version}\n`, ''))}`)
+  .description(`${chalk.blue(getCommandDescAndLog(`\nDx/Ui CLI v${pkg.version}\n`, ''))}`)
   .version(pkg.version, '-v, --version', 'Output the current version')
   .helpOption('-h, --help', 'Display help for command')
   .allowUnknownOption()
@@ -55,7 +55,7 @@ nextui
     }
 
     if (!isArgs) {
-      const helpInfo = (await exec('nextui --help', {logCmd: false, stdio: 'pipe'})) as string;
+      const helpInfo = (await exec('ui --help', {logCmd: false, stdio: 'pipe'})) as string;
 
       let helpInfoArr = helpInfo.split('\n');
 
@@ -76,7 +76,7 @@ nextui
     process.exit(0);
   });
 
-nextui
+ui
   .command('init')
   .description('Initializes a new project')
   .argument('[projectName]', 'Name of the project to initialize')
@@ -85,7 +85,7 @@ nextui
   // .option('-p --package [string]', 'The package manager to use for the new project')
   .action(initAction);
 
-nextui
+ui
   .command('add')
   .description('Adds components to your project')
   .argument('[components...]', 'Names of components to add')
@@ -97,7 +97,7 @@ nextui
   .option('--addApp [boolean]', 'Include App.tsx file content that requires a provider', false)
   .action(addAction);
 
-nextui
+ui
   .command('upgrade')
   .description('Upgrades project components to the latest versions')
   .argument('[components...]', 'Names of components to upgrade')
@@ -105,7 +105,7 @@ nextui
   .option('-a --all [boolean]', 'Upgrade all components', false)
   .action(upgradeAction);
 
-nextui
+ui
   .command('remove')
   .description('Removes components from the project')
   .argument('[components...]', 'Names of components to remove')
@@ -114,19 +114,19 @@ nextui
   .option('-tw --tailwindPath [string]', 'Specify the path to the tailwind.config.js file')
   .action(removeAction);
 
-nextui
+ui
   .command('list')
   .description('Lists all components, showing status, descriptions, and versions')
   .option('-p --packagePath [string]', 'Specify the path to the package.json file')
   .option('-r --remote', 'List all components available remotely')
   .action(listAction);
-nextui
+ui
   .command('env')
   .description('Displays debugging information for the local environment')
   .option('-p --packagePath [string]', 'Specify the path to the package.json file')
   .action(envAction);
 
-nextui
+ui
   .command('doctor')
   .description('Checks for issues in the project')
   .option('-p --packagePath [string]', 'Specify the path to the package.json file')
@@ -137,7 +137,7 @@ nextui
   .option('-cp --checkPnpm [boolean]', 'Check for Pnpm', true)
   .action(doctorAction);
 
-nextui.hook('preAction', async (command) => {
+ui.hook('preAction', async (command) => {
   const args = command.args?.[0];
 
   if (args && commandList.includes(args as CommandName)) {
@@ -165,9 +165,9 @@ nextui.hook('preAction', async (command) => {
         `Available upgrade: v${currentVersion} -> ${chalk.greenBright(
           `v${cliLatestVersion}`
         )}\nRun \`${chalk.cyan(
-          'npm install nextui-cli@latest'
+          'npm install ui-cli@latest'
         )}\` to upgrade\nChangelog: ${chalk.underline(
-          'https://github.com/nextui-org/nextui-cli/releases'
+          'https://github.com/ui-org/ui-cli/releases'
         )}`
       )}`,
       title: gradientString('NextUI CLI')
@@ -176,7 +176,7 @@ nextui.hook('preAction', async (command) => {
   }
 });
 
-nextui.parseAsync(process.argv).catch(async (reason) => {
+ui.parseAsync(process.argv).catch(async (reason) => {
   Logger.newLine();
   Logger.error('Unexpected error. Please report it as a bug:');
   Logger.log(reason);
