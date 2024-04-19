@@ -26,7 +26,7 @@ const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 async function welcome() {
   const rainbowTitle = chalkAnimation.rainbow(
-    'Who Wants To Be A JavaScript Millionaire? \n'
+    'Dx Ui - Is a cli app to quickly add your favorite components from your favorite ui frameworks.\n'
   );
 
   await sleep();
